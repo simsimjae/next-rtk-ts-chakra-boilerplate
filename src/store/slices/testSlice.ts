@@ -25,8 +25,8 @@ const testSlice = createSlice({
       state.requestId = action.meta.requestId;
     });
     builder.addCase(incrementAsync.fulfilled, (state, action) => {
-      state.count = state.count + action.payload;
       if (state.loading === 'pending' && action.meta.requestId === state.requestId) {
+        state.count = state.count + action.payload;
       }
     });
   },
