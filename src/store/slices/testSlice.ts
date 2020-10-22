@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-export const incrementAsync = createAsyncThunk<any, number, any>('test/incrementAsync', async (diff: number) => {
-  await new Promise(resolve =>
+export const incrementAsync = createAsyncThunk<number, number>('test/incrementAsync', async diff => {
+  return await new Promise(resolve =>
     setTimeout(() => {
-      return resolve(diff);
+      resolve(diff);
     }, 1000),
   );
 });
