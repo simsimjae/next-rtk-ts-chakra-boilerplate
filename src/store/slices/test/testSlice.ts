@@ -2,7 +2,7 @@ import { createEntityAdapter, createSlice, PayloadAction } from '@reduxjs/toolki
 import { incrementAsync } from './testActions';
 
 interface Book {
-  id: string;
+  id: string | number;
   title: string;
 }
 
