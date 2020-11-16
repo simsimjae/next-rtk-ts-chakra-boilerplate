@@ -1,7 +1,8 @@
 import { Button, Heading, VStack } from '@chakra-ui/core';
 import React from 'react';
 import useStore from '../src/hooks/useStore';
-import { decrement, increment, incrementAsync } from '../src/store/slices/testSlice';
+import { incrementAsync } from '../src/store/slices/test/testActions';
+import { decrement, increment } from '../src/store/slices/test/testSlice';
 
 interface Props {}
 

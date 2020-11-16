@@ -1,16 +1,19 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createEntityAdapter, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { incrementAsync } from './testActions';
 
-export const incrementAsync = createAsyncThunk<number, number>('test/incrementAsync', async diff => {
-  return await new Promise(resolve =>
-    setTimeout(() => {
-      resolve(diff);
-    }, 1000),
-  );
+interface Book {
+  id: string;
+  title: string;
+}
+
+export const testEntityAdapter = createEntityAdapter<Book>({
+  selectId: book => book.id,
+  sortComparer: (a, b) => a.title.localeCompare(b.title),
 });
 
 const testSlice = createSlice({
   name: 'test',
-  initialState: { count: 0, loading: 'idle', requestId: undefined, error: null },
+  initialState: testEntityAdapter.getInitialState({ count: 0, loading: 'idle', requestId: undefined, error: null }),
   reducers: {
     increment: (state, action: PayloadAction<number>) => {
       state.count = state.count + action.payload;
@@ -18,6 +21,11 @@ const testSlice = createSlice({
     decrement: (state, action: PayloadAction<number>) => {
       state.count = state.count - action.payload;
     },
+    bookAdded: testEntityAdapter.addOne,
+    booksReceived: (state, action) => {
+      testEntityAdapter.setAll(state, action.payload);
+    },
+    bookUpdated: testEntityAdapter.updateOne,
   },
   extraReducers: builder => {
     builder.addCase(incrementAsync.pending, (state, action) => {
@@ -32,5 +40,5 @@ const testSlice = createSlice({
   },
 });
 
-export const { increment, decrement } = testSlice.actions;
+export const { increment, decrement, bookAdded, booksReceived, bookUpdated } = testSlice.actions;
 export default testSlice;
