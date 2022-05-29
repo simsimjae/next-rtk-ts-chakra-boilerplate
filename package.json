@@ -9,6 +9,10 @@
   },
   "dependencies": {
     "@chakra-ui/core": "^1.0.0-rc.5",
+    "@chakra-ui/pro-theme": "^0.0.51",
+    "@chakra-ui/react": "^2.1.2",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
     "@reduxjs/toolkit": "^1.4.0",
     "axios": "^0.21.0",
     "browser-image-compression": "^1.0.13",
@@ -16,23 +20,25 @@
     "dayjs": "^1.9.6",
     "firebase": "^8.0.2",
     "format-si-prefix": "^0.3.2",
+    "framer-motion": "^6",
     "html-dom-parser": "^0.3.0",
-    "next": "9.5.5",
-    "react": "17.0.0",
-    "react-dom": "17.0.0",
+    "next": "^12.1.6",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "react-redux": "^7.2.1",
     "redux-logger": "^3.0.6",
     "uid": "^2.0.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.2",
-    "@types/react": "^16.9.53",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "@types/react-redux": "^7.1.9",
     "@types/redux-logger": "^3.0.8",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
     "eslint": "^7.11.0",
     "eslint-plugin-react": "^7.21.5",
-    "typescript": "^4.0.3"
+    "typescript": "^4.7.2"
   }
 }
