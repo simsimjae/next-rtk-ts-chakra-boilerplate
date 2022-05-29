@@ -8,12 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
-    "@chakra-ui/core": "^1.0.0-rc.5",
     "@chakra-ui/icons": "^2.0.1",
     "@chakra-ui/pro-theme": "^0.0.51",
-    "@chakra-ui/react": "^2.1.2",
+    "@chakra-ui/react": "2.0.0-next.3",
+    "@chakra-ui/theme-tools": "2.0.0",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@fontsource/inter": "^4.5.10",
     "@reduxjs/toolkit": "^1.8.2",
     "axios": "^0.21.0",
     "browser-image-compression": "^1.0.13",

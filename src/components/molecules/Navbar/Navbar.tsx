@@ -7,7 +7,7 @@ import { ToggleButton } from './ToggleButton';
 import isMobile from 'is-mobile';
 
 export const Navbar = () => {
-  const isDesktop = !isMobile;
+  const isDesktop = !isMobile();
   const { isOpen, onToggle, onClose } = useDisclosure();
 
   return (
