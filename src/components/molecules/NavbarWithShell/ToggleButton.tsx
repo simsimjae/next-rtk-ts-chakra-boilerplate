@@ -31,5 +31,5 @@ interface ToggleButtonProps extends IconButtonProps {
 
 export const ToggleButton = (props: ToggleButtonProps) => {
   const { isOpen, ...iconButtonProps } = props;
-  return <IconButton position="relative" variant="unstyled" size="sm" color="on-accent" zIndex="skipLink" icon={<ToggleIcon active={isOpen} />} {...iconButtonProps} />;
+  return <IconButton position="relative" variant="unstyled" size="sm" color={isOpen ? 'white' : 'muted'} zIndex="skipLink" icon={<ToggleIcon active={isOpen} />} {...iconButtonProps} />;
 };

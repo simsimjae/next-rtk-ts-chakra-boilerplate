@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import store from '../store/store';
 import { theme } from '../theme';
 import { ChakraProvider, CSSReset } from '@chakra-ui/react';
+import '../../public/styles/globals.css';
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (

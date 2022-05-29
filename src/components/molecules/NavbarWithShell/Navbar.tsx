@@ -1,34 +1,37 @@
-import { Avatar, Box, Button, ButtonGroup, Container, Drawer, DrawerContent, DrawerOverlay, Flex, HStack, IconButton, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
+import { Avatar, Box, Button, ButtonGroup, Container, Drawer, DrawerContent, DrawerOverlay, Flex, HStack, IconButton, useBreakpointValue, useColorModeValue, useDisclosure } from '@chakra-ui/react';
+import isMobile from 'is-mobile';
+import Link from 'next/link';
 import * as React from 'react';
 import { FiHelpCircle, FiSearch, FiSettings } from 'react-icons/fi';
+import NavLink from '../../atoms/NavLink';
 import { Logo } from './Logo';
 import { Sidebar } from './Sidebar';
 import { ToggleButton } from './ToggleButton';
-import isMobile from 'is-mobile';
 
 export const Navbar = () => {
   const isDesktop = !isMobile();
   const { isOpen, onToggle, onClose } = useDisclosure();
 
   return (
-    <Box as="nav" bg="bg-accent" color="on-accent">
+    <Box as="nav" bg="bg-surface" boxShadow={useColorModeValue('sm', 'sm-dark')}>
       <Container py={{ base: '3', lg: '4' }}>
         <Flex justify="space-between">
-          <HStack spacing="4">
-            <Logo />
+          <HStack spacing="8">
+            <NavLink href="/" component={<Logo />} />
             {isDesktop && (
-              <ButtonGroup variant="ghost-on-accent" spacing="1">
-                <Button>Home</Button>
-                <Button aria-current="page">Dashboard</Button>
-                <Button>Tasks</Button>
-                <Button>Bookmarks</Button>
-                <Button>Users</Button>
+              <ButtonGroup variant="ghost" spacing="6">
+                <Button aria-current="page" fontSize="lg">
+                  웃긴 썰
+                </Button>
+                <Button fontSize="lg">황당 썰</Button>
+                <Button fontSize="lg">19금 썰</Button>
+                <Button fontSize="lg">자유 썰</Button>
               </ButtonGroup>
             )}
           </HStack>
           {isDesktop ? (
             <HStack spacing="4">
-              <ButtonGroup variant="ghost-on-accent" spacing="1">
+              <ButtonGroup variant="ghost" spacing="1">
                 <IconButton icon={<FiSearch fontSize="1.25rem" />} aria-label="Search" />
                 <IconButton icon={<FiSettings fontSize="1.25rem" />} aria-label="Settings" />
                 <IconButton icon={<FiHelpCircle fontSize="1.25rem" />} aria-label="Help Center" />
