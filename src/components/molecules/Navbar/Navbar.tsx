@@ -1,27 +1,14 @@
-import {
-  Avatar,
-  Box,
-  Button,
-  ButtonGroup,
-  Container,
-  Drawer,
-  DrawerContent,
-  DrawerOverlay,
-  Flex,
-  HStack,
-  IconButton,
-  useBreakpointValue,
-  useDisclosure,
-} from '@chakra-ui/react'
-import * as React from 'react'
-import { FiHelpCircle, FiSearch, FiSettings } from 'react-icons/fi'
-import { Logo } from './Logo'
-import { Sidebar } from './Sidebar'
-import { ToggleButton } from './ToggleButton'
+import { Avatar, Box, Button, ButtonGroup, Container, Drawer, DrawerContent, DrawerOverlay, Flex, HStack, IconButton, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
+import * as React from 'react';
+import { FiHelpCircle, FiSearch, FiSettings } from 'react-icons/fi';
+import { Logo } from './Logo';
+import { Sidebar } from './Sidebar';
+import { ToggleButton } from './ToggleButton';
+import isMobile from 'is-mobile';
 
 export const Navbar = () => {
-  const isDesktop = useBreakpointValue({ base: false, lg: true })
-  const { isOpen, onToggle, onClose } = useDisclosure()
+  const isDesktop = !isMobile;
+  const { isOpen, onToggle, onClose } = useDisclosure();
 
   return (
     <Box as="nav" bg="bg-accent" color="on-accent">
@@ -70,5 +57,5 @@ export const Navbar = () => {
         </Flex>
       </Container>
     </Box>
-  )
-}
+  );
+};

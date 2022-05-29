@@ -1,16 +1,6 @@
-import {
-  Box,
-  BoxProps,
-  Button,
-  Heading,
-  SimpleGrid,
-  Stack,
-  Text,
-  useBreakpointValue,
-  useColorModeValue,
-} from '@chakra-ui/react'
-import * as React from 'react'
-import { FiDownloadCloud } from 'react-icons/fi'
+import { Box, BoxProps, Button, Heading, SimpleGrid, Stack, Text, useBreakpointValue, useColorModeValue } from '@chakra-ui/react';
+import * as React from 'react';
+import { FiDownloadCloud } from 'react-icons/fi';
 
 export const Content = () => (
   <Stack spacing={{ base: '8', lg: '6' }}>
@@ -37,14 +27,6 @@ export const Content = () => (
     </Stack>
     <Card minH="xs" />
   </Stack>
-)
+);
 
-const Card = (props: BoxProps) => (
-  <Box
-    minH="36"
-    bg="bg-surface"
-    boxShadow={useColorModeValue('sm', 'sm-dark')}
-    borderRadius="lg"
-    {...props}
-  />
-)
+const Card = (props: BoxProps) => <Box minH="36" bg="bg-surface" boxShadow={useColorModeValue('sm', 'sm-dark')} borderRadius="lg" {...props} />;

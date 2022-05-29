@@ -49,4 +49,4 @@ export const members = [
     role: 'Frontend UI Engineer',
     rating: 4,
   },
-]
+];

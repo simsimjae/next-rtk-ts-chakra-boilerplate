@@ -1,7 +1,7 @@
-import { Box, Container } from '@chakra-ui/react'
-import * as React from 'react'
-import { Content } from './Content'
-import { Navbar } from './Navbar'
+import { Box, Container } from '@chakra-ui/react';
+import * as React from 'react';
+import { Content } from './Content';
+import { Navbar } from './Navbar';
 
 export const App = () => (
   <Box as="section" height="100vh" overflowY="auto">
@@ -10,4 +10,4 @@ export const App = () => (
       <Content />
     </Container>
   </Box>
-)
+);

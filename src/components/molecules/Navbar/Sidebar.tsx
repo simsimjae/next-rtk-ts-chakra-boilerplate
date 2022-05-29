@@ -1,30 +1,14 @@
-import { Icon } from '@chakra-ui/icons'
-import { Divider, Flex, Input, InputGroup, InputLeftElement, Stack } from '@chakra-ui/react'
-import * as React from 'react'
-import {
-  FiBarChart2,
-  FiBookmark,
-  FiCheckSquare,
-  FiHelpCircle,
-  FiHome,
-  FiSearch,
-  FiSettings,
-  FiUsers,
-} from 'react-icons/fi'
-import { Logo } from './Logo'
-import { NavButton } from './NavButton'
-import { UserProfile } from './UserProfile'
+import { Icon } from '@chakra-ui/icons';
+import { Divider, Flex, Input, InputGroup, InputLeftElement, Stack } from '@chakra-ui/react';
+import * as React from 'react';
+import { FiBarChart2, FiBookmark, FiCheckSquare, FiHelpCircle, FiHome, FiSearch, FiSettings, FiUsers } from 'react-icons/fi';
+import { Logo } from './Logo';
+import { NavButton } from './NavButton';
+import { UserProfile } from './UserProfile';
 
 export const Sidebar = () => (
   <Flex as="section" minH="100vh" bg="bg-canvas">
-    <Flex
-      flex="1"
-      bg="bg-accent"
-      color="on-accent"
-      maxW={{ base: 'full', sm: 'xs' }}
-      py={{ base: '6', sm: '8' }}
-      px={{ base: '4', sm: '6' }}
-    >
+    <Flex flex="1" bg="bg-accent" color="on-accent" maxW={{ base: 'full', sm: 'xs' }} py={{ base: '6', sm: '8' }} px={{ base: '4', sm: '6' }}>
       <Stack justify="space-between" spacing="1">
         <Stack spacing={{ base: '5', sm: '6' }} shouldWrapChildren>
           <Logo />
@@ -48,13 +32,9 @@ export const Sidebar = () => (
             <NavButton label="Settings" icon={FiSettings} />
           </Stack>
           <Divider />
-          <UserProfile
-            name="Christoph Winston"
-            image="https://tinyurl.com/yhkm2ek8"
-            email="chris@chakra-ui.com"
-          />
+          <UserProfile name="Christoph Winston" image="https://tinyurl.com/yhkm2ek8" email="chris@chakra-ui.com" />
         </Stack>
       </Stack>
     </Flex>
   </Flex>
-)
+);

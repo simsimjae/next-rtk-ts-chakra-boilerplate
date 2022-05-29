@@ -1,19 +1,7 @@
-import {
-  Button,
-  Container,
-  FormControl,
-  FormHelperText,
-  FormLabel,
-  Heading,
-  HStack,
-  Input,
-  Stack,
-  Text,
-  useBreakpointValue,
-} from '@chakra-ui/react'
-import * as React from 'react'
-import { Logo } from './Logo'
-import { GoogleIcon } from './ProviderIcons'
+import { Button, Container, FormControl, FormHelperText, FormLabel, Heading, HStack, Input, Stack, Text, useBreakpointValue } from '@chakra-ui/react';
+import * as React from 'react';
+import { Logo } from './Logo';
+import { GoogleIcon } from './ProviderIcons';
 
 export const App = () => (
   <Container maxW="md" py={{ base: '12', md: '24' }}>
@@ -58,4 +46,4 @@ export const App = () => (
       </HStack>
     </Stack>
   </Container>
-)
+);

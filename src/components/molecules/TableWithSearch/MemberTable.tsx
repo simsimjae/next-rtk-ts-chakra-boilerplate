@@ -1,25 +1,9 @@
-import {
-  Avatar,
-  Badge,
-  Box,
-  Checkbox,
-  HStack,
-  Icon,
-  IconButton,
-  Table,
-  TableProps,
-  Tbody,
-  Td,
-  Text,
-  Th,
-  Thead,
-  Tr,
-} from '@chakra-ui/react'
-import * as React from 'react'
-import { FiEdit2, FiTrash2 } from 'react-icons/fi'
-import { IoArrowDown } from 'react-icons/io5'
-import { Rating } from './Rating'
-import { members } from './data'
+import { Avatar, Badge, Box, Checkbox, HStack, Icon, IconButton, Table, TableProps, Tbody, Td, Text, Th, Thead, Tr } from '@chakra-ui/react';
+import * as React from 'react';
+import { FiEdit2, FiTrash2 } from 'react-icons/fi';
+import { IoArrowDown } from 'react-icons/io5';
+import { Rating } from './Rating';
+import { members } from './data';
 
 export const MemberTable = (props: TableProps) => (
   <Table {...props}>
@@ -42,7 +26,7 @@ export const MemberTable = (props: TableProps) => (
       </Tr>
     </Thead>
     <Tbody>
-      {members.map((member) => (
+      {members.map(member => (
         <Tr key={member.id}>
           <Td>
             <HStack spacing="3">
@@ -72,20 +56,12 @@ export const MemberTable = (props: TableProps) => (
           </Td>
           <Td>
             <HStack spacing="1">
-              <IconButton
-                icon={<FiTrash2 fontSize="1.25rem" />}
-                variant="ghost"
-                aria-label="Delete member"
-              />
-              <IconButton
-                icon={<FiEdit2 fontSize="1.25rem" />}
-                variant="ghost"
-                aria-label="Edit member"
-              />
+              <IconButton icon={<FiTrash2 fontSize="1.25rem" />} variant="ghost" aria-label="Delete member" />
+              <IconButton icon={<FiEdit2 fontSize="1.25rem" />} variant="ghost" aria-label="Edit member" />
             </HStack>
           </Td>
         </Tr>
       ))}
     </Tbody>
   </Table>
-)
+);

@@ -1,14 +1,7 @@
-import { chakra, HTMLChakraProps } from '@chakra-ui/react'
+import { chakra, HTMLChakraProps } from '@chakra-ui/react';
 
 export const Logo = (props: HTMLChakraProps<'svg'>) => (
-  <chakra.svg
-    color="on-accent"
-    height="8"
-    width="auto"
-    viewBox="0 0 482 89"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+  <chakra.svg color="on-accent" height="8" width="auto" viewBox="0 0 482 89" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -30,28 +23,14 @@ export const Logo = (props: HTMLChakraProps<'svg'>) => (
       fill="url(#paint1_linear)"
     />
     <defs>
-      <linearGradient
-        id="paint0_linear"
-        x1="44"
-        y1="-1.78854"
-        x2="44"
-        y2="91.3879"
-        gradientUnits="userSpaceOnUse"
-      >
+      <linearGradient id="paint0_linear" x1="44" y1="-1.78854" x2="44" y2="91.3879" gradientUnits="userSpaceOnUse">
         <stop stopColor="currentColor" />
         <stop offset="1" stopColor="currentColor" />
       </linearGradient>
-      <linearGradient
-        id="paint1_linear"
-        x1="417.5"
-        y1="13.282"
-        x2="417.5"
-        y2="76.282"
-        gradientUnits="userSpaceOnUse"
-      >
+      <linearGradient id="paint1_linear" x1="417.5" y1="13.282" x2="417.5" y2="76.282" gradientUnits="userSpaceOnUse">
         <stop stopColor="currentColor" />
         <stop offset="1" stopColor="currentColor" />
       </linearGradient>
     </defs>
   </chakra.svg>
-)
+);
